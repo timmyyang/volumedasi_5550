@@ -1,0 +1,7 @@
+1 iris
+2 tv
+3 stb
+4 internet radio
+5 wap
+6 voip
+7 device
