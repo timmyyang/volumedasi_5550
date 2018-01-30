@@ -46,7 +46,7 @@ ex: when you say go iris , the angle = 350 degree ,then you say something , the 
 
 def word_mapping(lan,skill,angle):
     try:
-        angle_degree = open('/tmp/file/angle','r').read().strip()
+        angle_degree = file_get('/tmp/file/angle')
         angle_final = angle_calc(angle ,angle_degree)
         if angle_final == 1:
             if lan == "EN":
