@@ -27,4 +27,3 @@ def inital_device():
     Library.set_iris_conf('radio3',1)
     command = ("ffserver /etc/ffserver.conf&")
     subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).wait()
-    

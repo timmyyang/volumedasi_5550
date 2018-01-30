@@ -1,5 +1,32 @@
 # -*- coding: UTF-8 -*-
+import ./Speech_recognition/main_speech_pair
+import ./Speech_recognition/device_speech_pair
+import Library
 
+clistener_mapping = {
+    'main' : "/usr/bin/main",
+    'device' : "/usr/bin/device",
+    'controller' : "/usr/bin/controller",
+    'STB' : "/usr/bin/STB",
+    'radio' : "/usr/bin/radio",
+    'voip' : "/usr/bin/voip"
+}
+
+clistener_mapping_de = {
+    0 : "/usr/bin/Command_0407",
+    1 : "/usr/bin/Command_0407"
+}
+
+"""
+
+"""
+
+def clistten(lan,skill,need_kill):
+    if need_kill == 1:
+        kill_program('CListenerDemo_x86')
+        
+    command = '/usr/bin/CListenerDemo_x86 TW' +  clistener_mapping[skill] + ' 0'    
+    start_program_wait(command)
 """
 return 1 = range in +-20
 
@@ -14,61 +41,70 @@ def angle_calc(angle ,angle_degree):
         return 0
         
 """
-return 1 = range in +-20
-
-return 0 = range out +-20
+ex: when you say go iris , the angle = 350 degree ,then you say something , the other angle = +-20 degree ,you will mapping
 """    
 
-def iris_mapping(lan , angle):
+def word_mapping(lan,skill,angle):
     try:
-        f = open('/tmp/file/clisten', 'r').read().strip()
-        f_tmp = f
-        #print ("clisten = " , f)
+        angle_degree = open('/tmp/file/angle','r').read().strip()
+        angle_final = angle_calc(angle ,angle_degree)
+        if angle_final == 1:
+            if lan == "EN":
+                if skill == 'main':
+                    pair_id = main_speech_pair.word_main_mapping()
+                elif skill == 'help':
+                    pair_id = main_speech_pair.word_main_mapping()
+                elif skill == 'device':
+                    pair_id = device_speech_pair.word_main_mapping()
+                elif skill == 'channel':
+                    pair_id = word_mapping()
+                elif skill == 'controller':
+                    pair_id = word_controller()
+                elif skill == 'STB':
+                    pair_id = word_Andromeda()
+                elif skill == 'radio':
+                    pair_id = word_radio()
+                elif skill == 'voip':
+                    pair_id = word_voip() 
+        else :
+            pair_id = 9999
+    except Exception as exc:
+        pair_id = 9999
         
-        if lan == "EN":
-            '''
-            word_check = 0
-            while word_check < len(word_detct_check):
-                info = f_tmp.find(word_detct_check[word_check])
-                if info >= 0:
-                    f = word_reorganization[word_detct_check[word_check]]
-                    break
-                word_check = word_check + 1
-            '''      
-            try:
-                angle_degree = open('/tmp/file/angle','r').read().strip()
-                angle_final = angle_calc(angle ,angle_degree)
-                #if angle_final == 1:
-                if angle_final != 100  :
-                    word_id = word_mapping[f]
-                else :
-                    if f != '0':
-                        word_id = 1000
-                    else:   
-                        word_id = 999
-            except Exception as exc:
-                if f != '0':
-                    word_id = 1000
-                else:   
-                    word_id = 999
-        elif lan == "DE":
-            try:
-                word_id = word_mapping_de[f]
-            except Exception as exc:
-                if f != '0':
-                    word_id = 1000
-                else:
-                    word_id = 999
-    except Exception as exc:
-        word_id = 999
-    return word_id
+    return pair_id
     
-def iris_mapping_no_angle(lan):
-    f = open('/tmp/file/clisten', 'r').read().strip()
+def word_mapping_no_angle(lan,skill):
+
     try:
-        word_id = word_mapping[f]
+        if lan == "EN":
+            if skill == 'main':
+                pair_id = main_speech_pair.word_main_mapping()
+            elif skill == 'help':
+                pair_id = main_speech_pair.word_main_mapping()
+            elif skill == 'device':
+                pair_id = device_speech_pair.word_main_mapping()
+            elif skill == 'channel':
+                pair_id = word_mapping()
+            elif skill == 'controller':
+                pair_id = word_controller()
+            elif skill == 'STB':
+                pair_id = word_Andromeda()
+            elif skill == 'radio':
+                pair_id = word_radio()
+            elif skill == 'voip':
+                pair_id = word_voip() 
+
     except Exception as exc:
-        if f != '0':
-            word_id = 1000
-        else:   
-            word_id = 999
+        pair_id = 9999
+        
+    return pair_id
+    
+def cspotter_check(lan):
+    f = Library.file_get('/tmp/file/cspotter')
+    if f == "Go Iris" or f == "Iris":
+        Library.file_set('/tmp/file/cspotter','0')
+        angle = C1_Def_File.angle_get()
+        return 1 , angle
+    else 
+        return 0 , 0
+        

@@ -49,11 +49,54 @@ def Get_my_ip():
     my_ip = my_ip.strip()
     return my_ip
     
+    
+"""
+get ip and change to 255 ex 192.168.1.1 > 192.168.1.255
+"""
+
+def Get_brocast_ip():
+    my_ip_exec_check=0
+    while my_ip_exec_check == 0:
+        my_ip = Get_my_ip()
+        try:
+            #print my_ip[0]
+            my_ip_exec_check=1
+        except Exception as exc:
+            my_ip_exec_check=0    
+
+    j=0
+    default_ip_count=0
+    default_ip=''
+    while default_ip_count < 3:
+
+        if my_ip[j] == '.' and default_ip_count < 3:
+            default_ip_count=default_ip_count+1
+
+        default_ip += str(my_ip[j])
+        j=j+1
+    default_ip = default_ip + '255'
+    #print default_ip
+    return default_ip
+    
 """
 port = network port
 word = which word you want to sendto
 ip = 255 or unicast ip
 """
+
+def brocast_iris_ip():
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
+
+        PORT = 1060
+        ip = 'c' + Get_my_ip()
+        brocast_ip = Get_brocast_ip()
+        #network = '<broadcast>'
+        s.sendto( ip.encode('utf-8'), (brocast_ip, PORT))
+    except Exception as exc:
+        #print ("Network is unreachable")
+        pass
 
 def brocast_to_ip(port,word,ip):
 
@@ -84,7 +127,8 @@ def start_program_wait(command):
     subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).wait()
     
 def kill_program(command):
-    subprocess.Popen(['killall' ,'-9' ,command]).wait()
+    command = 'killall -9 ' + command
+    bprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).wait()
     
 """
 play_music_keep() add -r 
@@ -198,7 +242,7 @@ def file_get(file):
             
 def file_set(file,word):
     f = open(file,'w')
-    f.write(word)
+    f.write(str(word))
     f.close()    
     
 def file_copy(tmp_file,file):
