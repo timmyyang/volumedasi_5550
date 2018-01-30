@@ -61,4 +61,71 @@ word_device = {
     "GoBackToSkills" : 100
     
 }
+
+word_detct_check = {
+    0 : "OffTheTheFan" ,  
+    1 : "OffTheFan",
+    2 : "OnTheTv",
+    3 : "OnTheSoundMachine",
+    4 : "OffTheTv",
+    5 : "OffTheSoundMachine",
+    6 : "PlayTheIris",
+    7 : "SeeYouIris",
+    8 : "Iris",
+    9 : "OnTheLight",
+    10 : "OffTheLight",
+    11 : "OffTheLight",
+    12 : "PartyModeSong",
+    13 : "PartyMode",
+    14 : "AnnouncementModeSong",
+    15 : "TheInternetRadio",
+    16 : "OnInternetRadio",
+    17 : "OffInternetRadio",
+    18 : "TheController",
+    19 : "OnControllero",
+    20 : "OffController",
+    21 : "TheAndromeda",
+    22 : "OnAndromeda",
+    23 : "OffAndromeda"
+}
+
+word_reorganization = {
+    "OffTheTheFan" : "TurnOffTTheFan" ,  
+    "OffTheFan" : "TurnOffTheFan" ,
+    "OnTheTv" : "TurnOnTheTv" ,
+    "OnTheSoundMachine" : "TurnOnTheSoundMachine" ,
+    "OffTheTv" : "TurnOffTheTv" ,
+    "OffTheSoundMachine" : "TurnOffTheSoundMachine" ,
+    "PlayTheIris" : "Iris" ,
+    "Iris" : "Iris" ,
+    "OnTheLight" : "TurnOnTheLight" ,
+    "OffTheLight" : "TurnOffTheLight",
+    "SeeYouIris" : "SeeYouIris",
+    "PartyModeSong" :"PartyModeOn",
+    "PartyMode" : "PartyModeOn",
+    "AnnouncementModeSong" : "AnnouncementModeOn",
+    "TheInternetRadio" : "TurnTheInternetRadio",
+    "OnInternetRadio" : "TurnOnInternetRadio",
+    "OffInternetRadio" : "TurnOffInternetRadio",
+    "TheController" : "TurnTheController",
+    "OnController" : "TurnOnController",
+    "OffController" : "TurnOffController",
+    "TheAndromeda" : "TurnTheAndromeda",
+    "OnAndromeda" : "TurnOnAndromeda",
+    "OffAndromeda" : "TurnOffAndromeda"
+    
+}
+
+def device_mapping()
+    f = open('/tmp/file/clisten', 'r').read().strip()
+    f_tmp = f
+    word_check = 0
+    while word_check < len(word_detct_check):
+        info = f_tmp.find(word_detct_check[word_check])
+        if info >= 0:
+            f = word_reorganization[word_detct_check[word_check]]
+            break
+        word_check = word_check + 1
+   pair_id = main_speech_pair.word_device[f]
+   return pair_id
     
