@@ -1,4 +1,4 @@
-audio_play_en = {
+device_play_en = {
     0 :  "/root/audio/en/0_OK_Turn_On_The_Light.mp3",
     1 :  "/root/audio/en/1_OK_Turn_On_The_TV.mp3",
     2 :  "/root/audio/en/2_OK_Turn_On_The_Fan.mp3",
@@ -38,142 +38,20 @@ audio_play_en = {
     37:  "/root/audio/en/37_Andromeda_turn_on.mp3"
 }
 
-audio_main_play_en = {
-    0 :  "/root/audio/en/Iris_is_get_ready.mp3",
-    1 :  "/root/audio/en/Alexa_error.mp3",
-    2 :  "/root/audio/en/Iris_down.mp3",
-    3 :  "/root/audio/en/Hello.mp3",
-    4 :  "/root/audio/en/100_Leave_me.mp3",
-    5 :  "/root/audio/en/100_Ok_goodbye.mp3",
-    6 :  "/root/audio/en/32_Wps_keep.mp3",
-    7 :  "/root/audio/en/32_Wps_Successful_pairing.mp3",
-    8 :  "/root/audio/en/32_Wps_time_out_please_try_again.mp3",
-    9 :  "/root/audio/en/27_Sonar.mp3",
-    10 :  "/root/audio/en/33_Find_the_wifi.mp3",
-    11 :  "/root/audio/en/33_Wifi_error.mp3",
-    12 :  "/root/audio/en/master_connect_wifi_1.mp3",
-    13 :  "/root/audio/en/master_connect_wifi_2.mp3",
-    14 :  "/root/audio/en/master_connect_wifi_3.mp3",
-    15 :  "/root/audio/en/master_connect_wifi_4.mp3",
-    16 :  "/root/audio/en/master_connect_wifi_5.mp3",
-    17 :  "/root/audio/en/master_connect_wifi_6.mp3",
-    18 :  "/root/audio/en/master_connect_wifi_7.mp3",
-    19 :  "/root/audio/en/master_connect_wifi_8.mp3",
-    20 :  "/root/audio/en/master_connect_wifi_9.mp3",
-    21 :  "/root/audio/en/Find_one_iris.mp3",
-    22 :  "/root/audio/en/Mono_channel.mp3",
-    23 :  "/root/audio/en/Left_channel.mp3",
-    24 :  "/root/audio/en/Right_channel.mp3",
-    25 :  "/root/audio/en/Exit_tuning.mp3" ,
-    26 :  "/root/audio/en/Enjoy_your_voice.mp3" ,
-    27 :  "/root/audio/en/Ok.mp3" ,
-    28 :  "/root/audio/en/35_Ir_turn_off.mp3" ,
-    29 :  "/root/audio/en/36_Radio_turn_off.mp3",
-    30 :  "/root/audio/en/37_Andromeda_turn_off.mp3",
-    31 :  "/root/audio/en/Please_check_net.mp3",
-    32 :  "/root/audio/en/Light_is_on.mp3",
-    33 :  "/root/audio/en/Light_is_off.mp3",
-    34 :  "/root/audio/en/Tv_is_on.mp3",
-    35 :  "/root/audio/en/Tv_is_off.mp3",
-    36 :  "/root/audio/en/Fan_is_on.mp3",
-    37 :  "/root/audio/en/Fan_is_off.mp3",
-    38 :  "/root/audio/en/Soundmachine_is_on.mp3",
-    39 :  "/root/audio/en/Soundmachine_is_off.mp3",
-    40 :  "/root/audio/en/Ok_raido_will_turn_on_in_one_minute.mp3",
-    41 :  "/root/audio/en/With_iris_smart_home.mp3",
-    42 :  "/root/audio/en/Ring.mp3" ,
-    43 :  "/root/audio/en/Hello_how_can_I_help_you.mp3",
-    44 :  "/root/audio/en/Ok_back_to_main_skills.mp3",
-    45 :  "/root/audio/en/Ok_turning_on_Live_TV.mp3",
-    46 :  "/root/audio/en/Ok_going_to_mediastore.mp3",
-    47 :  "/root/audio/en/Ok_what_would_you_like_to_see.mp3",
-    48 :  "/root/audio/en/Ok_what_would_you_like_to_listen_to.mp3",
-    49 :  "/root/audio/en/Ok_the_power_is_on.mp3",
-    50 :  "/root/audio/en/Channel_three.mp3" ,
-    51 :  "/root/audio/en/Channel_forty_nine.mp3",
-    52 :  "/root/audio/en/Channel_fifty.mp3",
-    53 :  "/root/audio/en/Ok_volume_is_now_on_mute.mp3",
-    54 :  "/root/audio/en/Ok_volume_is_now_on_lowest_volume.mp3",
-    55 :  "/root/audio/en/Ok_volume_is_now_on_highest_volume.mp3" ,
-    56 :  "/root/audio/en/Ok_volume_is_now_off_mute.mp3",
-    57 :  "/root/audio/en/Ok_the_power_is_off.mp3",
-    58 :  "/root/audio/en/what_device_trun_on_off.mp3",
-    59 :  "/root/audio/en/who_you_like_to_call.mp3",
-    60 :  "/root/audio/en/trigger.mp3"
-}
 
-audio_play_de = {
-    0 :  "/root/audio/de/0_OK_Turn_On_The_Light.mp3",
-    1 :  "/root/audio/de/1_OK_Turn_On_The_TV.mp3",
-    2 :  "/root/audio/de/2_OK_Turn_On_The_Fan.mp3",
-    3 :  "/root/audio/de/3_Turn_On_Sound_Machine.mp3",
-    4 :  "/root/audio/de/4_OK_Turn_Off_The_light.mp3",
-    5 :  "/root/audio/de/5_OK_Turn_Off_The_TV.mp3",
-    6 :  "/root/audio/de/6_OK_Turn_Off_all_The_Fan.mp3",
-    7 :  "/root/audio/de/7_OK_Turn_off_all_The_Machine.mp3",
-    8 :  "/root/audio/de/8_OK_Turn_On_All_The_Devices.mp3",
-    9 :  "/root/audio/de/9_OK_Turn_Off_All_The_Devices.mp3",
-    13:  "/root/audio/de/13_OK_Take_The_Call.mp3",
-    14:  "/root/audio/de/14_OK_Announcement_Mode_On.mp3",
-    15:  "/root/audio/de/15_OK_Announcement_Mode_Off.mp3",
-    16:  "/root/audio/de/16_OK_Party_Mode_On.mp3",
-    17:  "/root/audio/de/17_OK_Party_Mode_Off.mp3",
-    18:  "/root/audio/de/18_OK_GO_alexa.mp3",
-    19:  "/root/audio/de/19_OK_GO_iris.mp3",
-    20:  "/root/audio/de/20_OK_Turn_Volume_Up.mp3",
-    21:  "/root/audio/de/21_OK_Turn_Volume_Down.mp3",
-    22:  "/root/audio/de/22_Ding.mp3",
-    23:  "/root/audio/de/23_Ding.mp3", 
-    24:  "/root/audio/de/24_Ding.mp3",     
-    25:  "/root/audio/de/25_Play_the_Music.mp3",
-    27:  "/root/audio/de/27_OK_Search_The_Iris.mp3",
-    28:  "/root/audio/de/28_Iris_search_down.mp3",
-    29:  "/root/audio/de/29_Time_To_Eat.mp3",
-    30:  "/root/audio/de/30_Start_Wifi.mp3",
-    31:  "/root/audio/de/31_Show_Your_Voice.mp3",
-    32:  "/root/audio/de/32_Ok_Push_Wps.mp3",
-    33:  "/root/audio/de/33_Ok_connect_the_iris.mp3"
-}
-
-audio_main_play_de = {
-    0 :  "/root/audio/de/Iris_is_get_ready.mp3",
-    1 :  "/root/audio/de/Alexa_error.mp3",
-    2 :  "/root/audio/de/Iris_down.mp3",
-    3 :  "/root/audio/de/Hello.mp3",
-    4 :  "/root/audio/de/100_Leave_me.mp3",
-    5 :  "/root/audio/de/100_Ok_goodbye.mp3",
-    6 :  "/root/audio/de/32_Wps_keep.mp3",
-    7 :  "/root/audio/de/32_Wps_Successful_pairing.mp3",
-    8 :  "/root/audio/de/32_Wps_time_out_please_try_again.mp3",
-    9 :  "/root/audio/de/27_Sonar.mp3",
-    10 :  "/root/audio/de/33_Find_the_wifi.mp3",
-    11 :  "/root/audio/de/33_Wifi_error.mp3",
-    12 :  "/root/audio/de/master_connect_wifi_1.mp3",
-    13 :  "/root/audio/de/master_connect_wifi_2.mp3",
-    14 :  "/root/audio/de/master_connect_wifi_3.mp3",
-    15 :  "/root/audio/de/master_connect_wifi_4.mp3",
-    16 :  "/root/audio/de/master_connect_wifi_5.mp3",
-    17 :  "/root/audio/de/master_connect_wifi_6.mp3",
-    18 :  "/root/audio/de/master_connect_wifi_7.mp3",
-    19 :  "/root/audio/de/master_connect_wifi_8.mp3",
-    20 :  "/root/audio/de/master_connect_wifi_9.mp3",
-    21 :  "/root/audio/de/Find_one_iris.mp3"
-    
-}
-
-def iris_play(set_id,lan,child):
+def audio_play(pair_id,lan,skill):
     if lan=='EN':
-        if child==1:
-            playback = audio_play_en[set_id]
+        if skill=='device':
+            playback = device_play_en[pair_id]
             return playback
-        if child==2:
-            playback = audio_main_play_en[set_id]
+        if skill=='radio':
+            playback = audio_main_play_en[pair_id]
             return playback     
         
     if lan=='DE':
-        if child==1:
-            playback = audio_play_de[set_id]
+        if skill=='device':
+            playback = audio_play_de[pair_id]
             return playback
-        if child==2:
-            playback = audio_main_play_de[set_id]
+        if skill=='radio':
+            playback = audio_main_play_de[pair_id]
             return playback 
