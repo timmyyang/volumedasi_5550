@@ -1,0 +1,32 @@
+# -*- coding: UTF-8 -*-
+word_mapping = {
+    "TurnUpTheVolume" : 1,
+    "TurnTheVolumeUp" : 1,
+    "TurnDownTheVolume" : 2,
+    "TurnTheVolumeDown" : 2,
+    "MaxVolume" : 3,
+    "MinVolume" : 4,
+    "VolumeMute" : 5,
+    "TurnOnAnnouncementMode" : 51,
+    "AnnouncementMode" : 51,
+    "TurnOffAnnouncementMode" : 52,
+    "AnnouncementModeOff" : 52,
+    "TurnOnPartyMode" : 71,
+    "PartyMode" : 71,
+    "TurnOffPartyMode" : 72,
+    "PartyModeOff" : 72,
+    "DeviceMode" : 101,
+    "IoTSmartHome" : 101,
+    "SmartHome" : 101,
+    "SmartHomeOff" : 102,
+    "PhoneCalls" : 10,
+    "TurnOnRemoteControlMode" : 501,
+    "RemoteControlMode" : 501,
+    "ConnectToTheSetTopBox" :1001,
+    "SetTopBoxMode" :1001,
+    "TurnOnTheInternetRadio" : 1501,
+    "TurnTheInternetRadioOn" : 1501,
+    "GoodBye" : 50,
+    "SeeYouLater" : 50
+}
+    
